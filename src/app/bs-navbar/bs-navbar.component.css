@@ -1,0 +1,11 @@
+
+.dropdown-toggle { 
+  cursor: pointer;
+}
+.navbar-nav {
+  flex-direction: row;
+}
+.navbar-expand-md .navbar-nav .nav-link {
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
