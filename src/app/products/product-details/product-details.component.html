@@ -1,0 +1,36 @@
+
+<div class="row">
+    <ng-container>
+      <div class="col">
+        <!-- <product-card [product]="p" [shopping-cart]="cart"></product-card> -->
+        <div *ngIf="product" class="card">
+          <!-- <img *ngIf="product.imageUrl" class="card-img-top" [src]="product.imageUrl" alt="{{ product.title }}"> -->
+          <div class="card-body">
+            <h4 class="card-title">{{ product.name }}</h4>
+            <p>{{product.desc}}</p>
+            <p>Manufacturer : {{product.desc}}</p>
+            <p>Quantity : {{product.quantity}}</p>
+            <p class="card-text">{{ product.price | currency:'INR':true }}</p>
+          </div>
+          <div class="card-footer">
+            <button 
+              (click)="edit()"
+              class="btn btn-warning"
+            >
+              Edit
+            </button>
+            <button 
+              (click)="delete()"
+              class="btn btn-danger"
+            >
+              Delete
+            </button>
+            <!-- <ng-template #updateQuantity>
+              <product-quantity [product]="product" [shopping-cart]="shoppingCart">
+              </product-quantity>
+            </ng-template> -->
+          </div>
+        </div>              
+      </div>
+    </ng-container>
+</div>

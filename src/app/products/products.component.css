@@ -1,0 +1,16 @@
+.row {
+    margin-right: 0;
+    margin-left: 0;
+}
+.col-md-3, .col-xs-12 {
+    padding: 15px;
+}
+.addNewBtn {
+    padding-left: 2rem;
+}
+
+@media (max-width:768px) {
+    .row {
+        flex-direction: column;
+    }
+}

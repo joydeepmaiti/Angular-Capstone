@@ -1,0 +1,21 @@
+.col {
+    padding: 15px;
+}
+
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+button {
+    width: 46%;
+    margin: 0 2%;
+}
+
+@media (min-width:768px){
+    .row {
+        width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
