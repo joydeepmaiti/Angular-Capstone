@@ -17,6 +17,7 @@ export class ProductService {
   }
 
   addProduct(data){
+    data.count = 0;
     return this.http.post("http://localhost:3000/products", data);
   }
 
@@ -27,5 +28,7 @@ export class ProductService {
   deleteProduct(id){
     return this.http.delete("http://localhost:3000/products/"+id);
   }
+
+
 
 }

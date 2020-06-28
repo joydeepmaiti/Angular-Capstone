@@ -1,9 +1,9 @@
 <ng-template appPlaceholder></ng-template>
 <div class="row formDiv">
   <div class="col-xs-12 col-md-12 col-md-offset-3">
-    <!-- <div class="alert alert-danger" *ngIf="error">
-      <p>{{ error }}</p>
-    </div> -->
+    <div class="alert alert-danger" *ngIf="loginError">
+      <p>Invalid Login</p>
+    </div>
     <!-- <app-alert
       [message]="error"
       *ngIf="error"

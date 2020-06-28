@@ -9,13 +9,15 @@ import { ProductsRoutingModule } from './products/products-routing.module';
 import { BsNavbarComponent } from './bs-navbar/bs-navbar.component';
 import { AboutComponent } from './about/about.component';
 import { LoginComponent } from './login/login.component';
+import { MyProfileComponent } from './my-profile/my-profile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BsNavbarComponent,
     AboutComponent,
-    LoginComponent
+    LoginComponent,
+    MyProfileComponent
   ],
   imports: [
     BrowserModule,

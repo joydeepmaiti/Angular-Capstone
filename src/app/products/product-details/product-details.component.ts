@@ -21,7 +21,15 @@ export class ProductDetailsComponent implements OnInit {
           this.service.getProductdetails(this.id)
           .subscribe((data)=> {
             console.log("[PRODUCT]", data[0])
-            this.product = data[0]
+            if(data[0]){
+              this.product = data[0]
+              let p = data[0];
+              p.count =p.count + 1;
+              this.service.updateProduct(this.id,p)
+              .subscribe((data)=> {
+                console.log("[PRODUCT COUNT]", data)
+              })
+            }
           })
         }
       );
