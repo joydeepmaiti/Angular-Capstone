@@ -1,3 +1,4 @@
+<h2 style="text-align: center;">Products Page</h2>
 <a class="nav-link addNewBtn" routerLink="./add">
   <button class="btn btn-primary">
     Add New Product
@@ -6,10 +7,20 @@
 <app-chart></app-chart>
 <router-outlet></router-outlet>
 <div class="row">
+  <div class="col">
+
+    <div class="input-group col-md-4">
+      <label for=""><h4>Search: </h4></label>
+      <input class="form-control py-2" [(ngModel)]="search"  type="search" value="search" id="example-search-input" (keyup.enter)="onSearch()">
+    </div>
+  </div>
+</div>
+<div class="row">
     <!-- <div class="col-3">
       <product-filter [category]="category"></product-filter>
       FILTER
     </div> -->
+    
     <div class="col">
       <div class="row">
           <ng-container *ngFor="let p of filteredProducts; let i = index">

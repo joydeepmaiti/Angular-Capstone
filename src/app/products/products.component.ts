@@ -7,6 +7,7 @@ import { ProductService } from '../services/product.service'
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
+  search = null
   products = []
   filteredProducts = []
 
@@ -19,9 +20,18 @@ export class ProductsComponent implements OnInit {
   getAllProducts() {
     this.service.getProducts()
     .subscribe((data:[])=> {
-      console.log("[PRODUCTS]", data)
+      // console.log("[PRODUCTS]", data)
       this.products = data;
       this.filteredProducts = data;
+    })
+  }
+
+  onSearch() {
+    this.filteredProducts = []
+    this.products.map((el)=>{
+      if(el.name.toLowerCase().includes(this.search.toLowerCase())){
+        this.filteredProducts.push(el);
+      }
     })
   }
 

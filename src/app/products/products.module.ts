@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule }   from '@angular/forms';
 import { ChartsModule } from 'ng2-charts';
+import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 
 import { ProductsComponent } from './products.component';
 import { ProductsRoutingModule } from './products-routing.module';
@@ -25,10 +26,12 @@ import { ChartComponent } from './chart/chart.component';
     ProductsRoutingModule,
     HttpClientModule,
     FormsModule,
-    ChartsModule
+    ChartsModule,
+    HttpClientTestingModule
   ],
   providers: [
-    AuthGuard
+    AuthGuard,
+    HttpClientModule
   ],
 })
 export class ProductsModule { }

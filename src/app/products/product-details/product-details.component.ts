@@ -11,7 +11,7 @@ export class ProductDetailsComponent implements OnInit {
   product;
   id: number;
 
-  constructor(private route: ActivatedRoute, private service: ProductService, private router: Router) { }
+  constructor(public route: ActivatedRoute, private service: ProductService, private router: Router) { }
 
   ngOnInit(): void {
     this.route.params
